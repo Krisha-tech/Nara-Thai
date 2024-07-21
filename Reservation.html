@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservation</title>
+    <link rel="stylesheet" href="Reservation.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="navigation">
+        <!--navigation bar-->
+        <div class="logo">
+          <img src="Images/narathailogo.jpg" alt="" />
+        </div>
+        <ul class="links">
+          <li><a href="Home.php">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="./proj/menu.php">Menu</a></li>
+          <li><a href="Gallery.html">Gallery</a></li>
+          <li><a id="active-link" href="">Reservation</a></li>
+          <li><a href="./feedback/Contact.php">Contact</a></li>
+          <button class="login-btn">Signup</button>
+        </ul>
+      </div>
+    </header>
+    
+    <!-- login /Register-->
+    <div class="blur-bg-overlay"></div>
+    <div class="form-popup">
+        <span class="close-btn material-symbols-rounded">close</span>
+        <div class="form-box login">
+            <div class="form-details">
+               <!-- <h2>Welcome Back</h2>
+                <p>Please log in using your personal information to stay connected with us.</p>-->
+            </div>
+            <div class="form-content">
+              
+              
+                <h2>LOGIN</h2>
+                <form action="userlogin.php" method = "Post">
+                    <div class="input-field">
+                        <input type="email" name="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" name="password" required>
+                        <label>Password</label>
+                    </div>
+                    <a href="#" class="forgot-pass-link">Forgot password?</a>
+                    <button class="login-button" type="submit">Sign up</button>
+                </form>
+                <div class="bottom-link">
+                    Don't have an account?
+                    <a href="#" id="signup-link">Signup</a>
+                </div>
+            </div>
+        </div>
+        <div class="form-box signup">
+            <div class="form-details">
+                <!--<h2>Create Account</h2>
+                <p>To become a part of our community, please sign up using your personal information.</p>-->
+            </div>
+            <div class="form-content">
+                <h2>SIGNUP</h2>
+                <form action="userregister.php" method = "Post">
+                    <div class="input-field">
+                        <input type="email" name="email" required>
+                        <label>Enter your email</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" name="password" required>
+                        <label>Create password</label>
+                    </div>
+                    <div class="policy-text">
+                        <input type="checkbox" id="policy">
+                        <label for="policy">
+                            I agree the
+                            <a href="#" class="option">Terms & Conditions</a>
+                        </label>
+                    </div>
+                    <button class="login-button" type="submit">Sign Up</button>
+                </form>
+                <div class="bottom-link">
+                    Already have an account? 
+                    <a href="#" id="login-link">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section id="book">
+      <!-- Book a Table Section Content -->
+      <div class="book">
+        <h2>-Reserve A Table -</h2>
+        <form action="Home.php" method="post" class="booking-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address:</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="telephone">Contact Number:</label>
+              <input type="tel" id="telephone" name="telephone" required>
+            </div>
+            <div class="form-group">
+              <label for="date">Reservation Date:</label>
+              <input type="date" id="date" name="date" required>
+            </div>
+          </div>
+          <div class="form-row2">
+            <div class="form-group">
+            <label for="reservation-kind">Reservation Kind:</label>
+              <select id="reservation-kind" name="reservation-kind" required>
+                <option value="Breakfast">Breakfast (8:00 AM-11:00 AM)</option>
+                <option value="Lunch">Lunch (12:30 PM-3:00 PM)</option>
+                <option value="High Tea">High Tea  (4:30 PM-6:00 PM)</option>
+                <option value="Dinner">Dinner (7:00 PM-10:00 PM)</option>
+               
+            </select>
+            </div>
+           
+            <div class="form-group">
+              <label for="preffered-table">Preffered Table:</label>
+              <select id="preffered-table" name="preffered-table" required>
+                <option value="2 People">For 2 People</option>
+                <option value="4 People">For 4 People</option>
+                <option value="6 People">For 6 People</option>
+                <option value="8 People">For 8 People</option>
+               
+            </select>
+            </div>
+          </div>
+          <div class="form-row1">
+            <div class="form-group">
+              <label for="text">Message:</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+          </div>
+          <div class="form-row">
+            <button type="submit">Book Now</button>
+          </div>
+        </form>
+      </div>
+</section>
+    
+  
+    
+
+
+
+
+    <footer>
+      <!--footer-->
+      <div class="footer-details">
+
+        <div class="logo-footer">
+            <img src="Images/narathailogo.jpg" alt="">
+        </div>
+
+        <div class="links-footer">
+            <ul>
+                <li id="titles">Quick Links</li>
+                <li><a href="">Gallery</a></li>
+                <li><a href="">Reservation</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+        <div class="hours-footer">
+            <ul>
+                <li id="titles" >Opening Hours</li>
+                <li>MONDAY – THURSDAY</li>
+                <li>12.00 – 3.30 PM & 6.30 -10.30 PM</li>
+                <li>FRIDAY – SUNDAY</li>
+                <li>12.00 – 3.30 PM & 6.30 -10.30 PM</li>
+            </ul>
+        </div>
+      </div>
+   
+    </footer>
+   </body>
+   </html>
